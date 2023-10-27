@@ -61,9 +61,12 @@ public:
 
 
 
+/* 
+    没有像我一样反复建立哈希表，而是通过维护两个哈希表的方式来处理（因为我没有想到 == 运算符的重载）
+    并且利用vector的下标，与26个字母的顺序所对应
+*/
 
-/* leetcode官方解题思路
-class Solution {
+class officialSolution {
 public:
     vector<int> findAnagrams(string s, string p) {
         int sLen = s.size(), pLen = p.size();
@@ -96,4 +99,4 @@ public:
         return ans;
     }
 };
-*/
+
